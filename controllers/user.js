@@ -17,7 +17,7 @@ exports.read=(req,res)=>{
     return res.json(req.profile)
 }
 
-esports.update(req,res)=>{
+exports.update=(req,res)=>{
     User.findByIdAndUpdate({_id:req.profile._id},
         {$set:req.body},
         {new:true},
